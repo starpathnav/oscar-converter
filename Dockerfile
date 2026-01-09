@@ -14,10 +14,10 @@ COPY requirements_deploy.txt .
 RUN pip install --no-cache-dir -r requirements_deploy.txt
 
 # Copy application code
-COPY oscar_web_production.py .
+COPY oscar_web_simple.py .
 
 # Expose port (Render sets PORT env variable)
 EXPOSE 10000
 
 # Run the application - Render provides $PORT
-CMD ["sh", "-c", "gunicorn -w 2 -b 0.0.0.0:$PORT oscar_web_production:app"]
+CMD ["sh", "-c", "gunicorn -w 2 -b 0.0.0.0:$PORT oscar_web_simple:app"]
