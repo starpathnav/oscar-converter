@@ -1,8 +1,1 @@
-services:
-  - type: web
-    name: oscar-converter
-    env: docker
-    dockerfilePath: ./Dockerfile
-    envVars:
-      - key: PORT
-        value: 10000
+
